@@ -19,9 +19,19 @@ const MAYORIA_DE_EDAD = 18
 
 /* const esMayorDeEdad = function (persona) {
     return persona.edad >= MAYORIA_DE_EDAD;
-} */
+}
+ */
 
-const esMayorDeEdad = ({edad}) => edad >= MAYORIA_DE_EDAD
+/*  const esMayorDeEdad = function(persona){
+     return persona.edad >= MAYORIA_DE_EDAD;
+ } */
+
+ // Como escribir lo de arriba como un arrow Function
+/* const esMayorDeEdad = persona => persona.edad >= MAYORIA_DE_EDAD */
+
+// desestructurar el parametro
+const esMayorDeEdad = ({edad}) => edad >= MAYORIA_DE_EDAD;
+
 
 
 function imprimirSiEsMayorDeEdad(persona){
@@ -38,3 +48,5 @@ function permitirAcceso(persona){
     }
 }
 
+// Reto es menor de edad en arrow function
+const esMenorDeEdad = persona => !esMayorDeEdad(persona)
