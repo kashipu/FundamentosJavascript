@@ -19,13 +19,13 @@ var juan = {
 var dario = {
     nombre: 'Dario',
     apellido: 'Stivenson',
-    altura: 1.68
+    altura: 1.74
 };
 
 var ricardo = {
     nombre: 'Ricardo',
     apellido: 'Alvarez',
-    altura: 1.68
+    altura: 1.72
 };
 
 var nicolas = {
@@ -38,15 +38,12 @@ var personas = [
     carlos, william, juan, dario, ricardo, nicolas
 ]
 
-console.log(personas.length)
-console.log(`En la lista hay ${personas.length} personas y cada una mide`)
-for (var i = 0; i < personas.length; i++){
-    console.log(`${personas[i].nombre} mide ${personas[i].altura}`)
-}
+const esAlta = persona => persona.altura > 1.7
+const esBaja = persona => persona.altura < 1.7
 
+var personasAltas = personas.filter(esAlta)
+var personasBajas = personas.filter(esBaja)
 
-document.write(`En la lista hay ${personas.length} personas y cada una mide <hr>`)
-for (var i = 0; i < personas.length; i++){
-    document.write(`${personas[i].nombre} mide ${personas[i].altura} mt<br>`)
-}
+console.log(personasAltas)
+console.log(personasBajas)
 
