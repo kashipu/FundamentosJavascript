@@ -26,6 +26,8 @@ class Desarrollador extends Persona {
 
 }
 
-Desarrollador.prototype.saludar = function () {
-    console.log(`Hola me llamo ${this.nombre} ${this.apellido} y soy desarrollador`)
-}
+var william = new Persona('William', 'Moreno', 1.72)
+
+console.log(william);
+console.log(william.soyAlto());
+console.log(william.saludar());
